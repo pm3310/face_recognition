@@ -3,7 +3,7 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 
-from face_detector import FaceDetector
+from face_recognition import FaceRecogniser
 
 if __name__ == '__main__':
     lfw_people = fetch_lfw_people(min_faces_per_person=70, resize=0.4)
@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
 
-    face_detector = FaceDetector(
+    face_detector = FaceRecogniser(
         X_train,
         y_train,
         images_height=lfw_people.images.shape[1],
