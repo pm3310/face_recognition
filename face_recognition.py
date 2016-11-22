@@ -32,7 +32,7 @@ def svm_tuned_precision(x_train, y_train, x_test, y_test, kernel='linear', C=0, 
     return precision_score(y_test, predictions, average='weighted')
 
 
-class FaceDetector(object):
+class FaceRecogniser(object):
 
     def __init__(self, features_data, labels, images_width, images_height, n_eigenvectors=150, **kwargs):
         self._features_data = features_data
